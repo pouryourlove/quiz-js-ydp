@@ -38,6 +38,15 @@
 
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
+      let tags = document.querySelectorAll("span");
+      let container = document.querySelector("div.container");
+      for (let span of tags) {
+        span.style.color = "blueviolet";
+        span.style.fontWeight = "bold";
+      }
+
+      container.style.backgroundColor = "#eee";
+      container.style.textAlign = "center";
     </script>
   </body>
 </html>
