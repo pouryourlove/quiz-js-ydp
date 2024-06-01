@@ -20,7 +20,7 @@
         padding: 2px;
         border-radius: 3px;
         background-color: #ededed;
-        font-family: 'Noto Sans Mono', monospace;
+        font-family: "Noto Sans Mono", monospace;
         font-weight: 500;
       }
 
@@ -90,23 +90,42 @@
     <br />
 
     <script>
-      function drawStars() {
+      function drawStars(lines) {
         // TODO: drawStars() 함수 내부 코드를 채워주세요.
+        while (lines > 0) {
+          console.log("*".repeat(lines));
+          lines--;
+        }
       }
 
-      function drawStars2() {
+      function drawStars2(lines) {
         // TODO: drawStars2() 함수 내부 코드를 채워주세요.
+        for (let i = 1; i <= lines; i++) {
+          if (i === lines) {
+            console.log("*".repeat(i));
+          } else {
+            console.log(" ".repeat(lines - i) + "*".repeat(i));
+          }
+        }
       }
 
-      function drawStars3() {
+      function drawStars3(lines) {
         // TODO: drawStars3() 함수 내부 코드를 채워주세요.
+        for (let i = 1; i <= lines; i++) {
+          let space = lines - i;
+          let stars = 2 * i - 1;
+          let starLine =
+            " ".repeat(space) + "*".repeat(stars) + " ".repeat(space);
+
+          console.log(starLine);
+        }
       }
 
-      function drawStars4() {
+      function drawStars4(lines) {
         // TODO: drawStars4() 함수 내부 코드를 채워주세요.
       }
 
-      function drawStars5() {
+      function drawStars5(lines) {
         // TODO: drawStars5() 함수 내부 코드를 채워주세요.
       }
 
@@ -120,7 +139,7 @@
       // drawStars3(3);
       // drawStars3(5);
 
-      // drawStars4(3);
+      drawStars4(3);
       // drawStars4(5);
 
       // drawStars5(3);
