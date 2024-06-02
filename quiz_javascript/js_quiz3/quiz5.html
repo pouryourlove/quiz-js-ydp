@@ -123,10 +123,29 @@
 
       function drawStars4(lines) {
         // TODO: drawStars4() 함수 내부 코드를 채워주세요.
+        for (let i = 1; i <= lines; i++) {
+          let space = lines - i;
+          let stars = 2 * i - 1;
+          let starLine =
+            " ".repeat(space) + "*".repeat(stars) + " ".repeat(space);
+          console.log(starLine);
+        }
+        for (let j = lines - 1; j >= 1; j--) {
+          let space = lines - j;
+          let stars = 2 * j - 1;
+          let starLine =
+            " ".repeat(space) + "*".repeat(stars) + " ".repeat(space);
+          console.log(starLine);
+        }
       }
 
       function drawStars5(lines) {
         // TODO: drawStars5() 함수 내부 코드를 채워주세요.
+        for (let i = 0; i < lines; i++) {
+          let space = " ".repeat(lines - i - 1);
+          let stars = "*".repeat(lines);
+          console.log(space + stars);
+        }
       }
 
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 drawStars ~ drawStars5 함수를 호출해주세요!
@@ -139,11 +158,11 @@
       // drawStars3(3);
       // drawStars3(5);
 
-      drawStars4(3);
+      // drawStars4(3);
       // drawStars4(5);
 
       // drawStars5(3);
-      // drawStars5(5);
+      drawStars5(5);
     </script>
   </body>
 </html>
